@@ -2,9 +2,9 @@ public class Nutricionista {
     IDieta dieta;
     DietaAdapter programaDieta;
 
-    public Nutricionista(IDieta dieta, DietaAdapter programaDieta) {
-        this.dieta = dieta;
-        this.programaDieta = programaDieta;
+    public Nutricionista() {
+        dieta = new DietaAlimento();
+        programaDieta = new DietaAdapter(dieta);
     }
 
     public void setDieta(String alimento) {
